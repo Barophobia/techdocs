@@ -7,6 +7,6 @@ chapter = true
 
 ### Tech Notes
 
-## Homepage
+# Homepage
 
-There's stuff on the left
+There's stuff on the left, maybe.
