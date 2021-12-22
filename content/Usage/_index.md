@@ -14,5 +14,3 @@ If you want the raw files of the website you can clone the repo from github:
 ```
 git clone https://github.com/Barophobia/techdocs
 ```
-
-If you use the information anywhere cool, let me know :) 
