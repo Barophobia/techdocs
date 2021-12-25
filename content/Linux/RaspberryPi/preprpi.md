@@ -58,6 +58,6 @@ Find the IP on your router or use nmap to find the IP then:
 ssh pi@<IPADDRESS>
 ```
 
-The default password is raspberry.
+The default password is **raspberry**.
 
 You should now have access to your device without having to plug in a monitor.
