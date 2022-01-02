@@ -30,6 +30,7 @@ git status
 ```
 
 ### Adding files to your repository to be tracked
+
 To add files to be tracked you will need to use 'git add' an example of this would be:
 
 ```
@@ -37,3 +38,16 @@ git add .
 ```
 
 Using the command above will add all files inside the folder to be tracked. 
+
+### Commiting changes to the repository
+
+
+### Showing the history of the repository
+
+```
+git log
+```
+
+This command will show you the commits to the project you are looking at, each commit has a unique name called the git hash these are not randomly generated they are generated using SHA-1. The output also shows you the author, commit message and date and time of the commit.
+
+It is useful to see what the project looked like at each stage of the commits so if needed you can restore to a previous state.
