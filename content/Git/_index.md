@@ -41,6 +41,9 @@ Using the command above will add all files inside the folder to be tracked.
 
 ### Commiting changes to the repository
 
+```
+git commit
+```
 
 ### Showing the history of the repository
 
