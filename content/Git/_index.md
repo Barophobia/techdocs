@@ -45,6 +45,14 @@ Using the command above will add all files inside the folder to be tracked.
 git commit
 ```
 
+This command will commit the changes that have been added to the repository, it will bring up your default text editor and ask for a commit message, this is what will be seen when you look at repository history.
+
+I prefer to use the '-m' switch on my commit and then type the message inside the command meaning it skips the extra step of using a text editor.
+
+```
+git commit -m "MESSAGE GOES HERE"
+```
+
 ### Showing the history of the repository
 
 ```
