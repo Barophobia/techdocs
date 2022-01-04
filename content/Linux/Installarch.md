@@ -41,14 +41,27 @@ If you would like to use Wi-Fi:
 wifi-menu
 ```
 
+Now set your time and date using NTP:
 
+```
+timedateclt set-ntp truet
+```
 
 list all disk and partitions:
+
 ```
 fdisk -l
 ```
 
 Now select the disk you are going to format and partition:
+
 ```
-fdisk /dev/sda
+cfdisk /dev/sda
 ```
+This will bring up a screen asking to select the label type, choose: 'gpt'
+
+![LabelType](/themes/hugo-theme-learn/images/img/labeltype.png)
+![Minion](https://octodex.github.com/images/minion.png?width=20pc)
+![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg)
+
+This is some text.
