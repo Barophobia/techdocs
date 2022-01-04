@@ -60,8 +60,4 @@ cfdisk /dev/sda
 ```
 This will bring up a screen asking to select the label type, choose: 'gpt'
 
-![LabelType](/themes/hugo-theme-learn/images/img/labeltype.png)
-![Minion](https://octodex.github.com/images/minion.png?width=20pc)
-![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg)
-
-This is some text.
+![LabelType](/themes/hugo-theme-learn/static/images/labeltype.png)
