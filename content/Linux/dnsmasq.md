@@ -5,7 +5,7 @@ chapter = true
 pre = "<b> - </b>"
 +++
 
-## Install DNSMasq
+# Install DNSMasq
 
 **Install DNSMasq**
 Debian:

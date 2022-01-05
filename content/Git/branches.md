@@ -5,7 +5,7 @@ chapter = true
 pre = "<b> - </b>"
 +++
 
-## Git Branches
+# Git Branches
 
 ### Creating new branches
 

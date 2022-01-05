@@ -5,7 +5,7 @@ chapter = true
 pre = "<b> - </b>"
 +++
 
-## How to install Arch Linux
+# How to install Arch Linux
 
 Arch linux is a sort of 'build it yourself' OS allowing you to create the environment you desire, I use this to have a low resource requirement extending the life of 'old' hardware but it can be used for more than that.
 

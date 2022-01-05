@@ -5,7 +5,7 @@ chapter = true
 pre = "<b> - </b>"
 +++
 
-## Git 
+# Git 
 
 ### What is Git?
 
