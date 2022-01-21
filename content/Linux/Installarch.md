@@ -44,7 +44,7 @@ wifi-menu
 Now set your time and date using NTP:
 
 ```
-timedateclt set-ntp truet
+timedateclt set-ntp trueß
 ```
 
 list all disk and partitions:
