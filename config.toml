@@ -12,7 +12,7 @@ theme = "hugo-theme-learn"
   # Author of the site, will be used in meta information
   author = "Barophobia"
   # Description of the site, will be used in meta information
-  description = ""
+  description = "IT Technical Documentaion, Cheatsheets and information."
   # Shows a checkmark for visited pages on the menu
   showVisitedLinks = false
   # Disable search function. It will hide search bar
@@ -34,7 +34,7 @@ theme = "hugo-theme-learn"
   # Hide Next and Previous page buttons normally displayed full height beside content
   disableNextPrev = true
   # Order sections in menu by "weight" or "title". Default to "weight"
-  ordersectionsby = "weight"
+  ordersectionsby = "title"
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "red"
   # Provide a list of custom css files to load relative from the `static/` folder in the site root.
