@@ -60,4 +60,4 @@ cfdisk /dev/sda
 ```
 This will bring up a screen asking to select the label type, choose: 'gpt'
 
-![LabelType](/themes/hugo-theme-learn/static/images/labeltype.png)
+![LabelType](/images/archinstall/labeltype.png)
