@@ -6,8 +6,4 @@ chapter = true
 pre = "<b> - </b>"
 +++
 
-# Chapter 1
-
-# Some Chapter title
-
-Lorem Ipsum.
+# Linux
