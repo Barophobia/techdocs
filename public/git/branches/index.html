@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/logo.png" type="image/png">
 
-    <title>Home   </title>
+    <title>Git Branches   </title>
 
     
     <link href="/css/nucleus.css?1644403156" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/git/branches/">
     <nav id="sidebar" class="">
 
 
@@ -366,7 +366,7 @@
   
     
     <li data-nav-id="/git/" title="Git" class="dd-item
-        
+        parent
         
         
         ">
@@ -392,7 +392,7 @@
  
   
     
-      <li data-nav-id="/git/branches/" title="Git Branches" class="dd-item ">
+      <li data-nav-id="/git/branches/" title="Git Branches" class="dd-item active">
         <a href="/git/branches/">
         <b> - </b>Git Branches
         
@@ -992,6 +992,28 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                   Git Branches
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
@@ -1003,16 +1025,36 @@
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h3 id="tech-notes">Tech Notes</h3>
-<h1 id="homepage">Homepage</h1>
-<p>There&rsquo;s stuff on the left, maybe.</p>
+<h1 id="git-branches">Git Branches</h1>
+<h3 id="creating-new-branches">Creating new branches</h3>
+<p>If you have multiple people who contribute to a project then it may be useful to create a new branch so that the master branch is always working and correct.</p>
+<p>To create a new branch you can use this command.</p>
+<pre><code>git branch X
+</code></pre><p>X = name of the new branch</p>
+<p>now a new branch has been made but you are not on the branch yet, to switch to a new branch use:</p>
+<pre><code>git switch X
+</code></pre><p>X = name of the branch to switch to</p>
+<p>You are now on the new branch.</p>
+<p>you could also use:</p>
+<pre><code>git switch -c X
+</code></pre><p>X = new branch name</p>
+<p>this will create and switch you to the new branch that you have created.</p>
+<h3 id="listing-branches">Listing branches</h3>
+<p>To see local branches, run this command:</p>
+<pre><code>git branch
+</code></pre><p>To see remote branches, run this command:</p>
+<pre><code>git branch -r
+</code></pre><p>To see all local and remote branches, run this
+command:</p>
+<pre><code>git branch -a
+</code></pre><p>The current branch will be marked with an asterix.</p>
+
+
+<footer class="footline">
 	
-  
+</footer>
+
         
             </div> 
         
@@ -1363,6 +1405,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1375,6 +1418,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1394,6 +1438,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 

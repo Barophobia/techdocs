@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/logo.png" type="image/png">
 
-    <title>Home   </title>
+    <title>Setup Headless Raspberry Pi   </title>
 
     
     <link href="/css/nucleus.css?1644403156" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/linux/raspberrypi/preprpi/">
     <nav id="sidebar" class="">
 
 
@@ -421,7 +421,7 @@
   
     
     <li data-nav-id="/linux/" title="Linux" class="dd-item
-        
+        parent
         
         
         ">
@@ -549,7 +549,7 @@
   
     
     <li data-nav-id="/linux/raspberrypi/" title="Raspberry Pi" class="dd-item
-        
+        parent
         
         
         ">
@@ -575,7 +575,7 @@
  
   
     
-      <li data-nav-id="/linux/raspberrypi/preprpi/" title="Setup Headless Raspberry Pi" class="dd-item ">
+      <li data-nav-id="/linux/raspberrypi/preprpi/" title="Setup Headless Raspberry Pi" class="dd-item active">
         <a href="/linux/raspberrypi/preprpi/">
         <b> -- </b>Setup Headless Raspberry Pi
         
@@ -992,6 +992,28 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                   Setup Headless Raspberry Pi
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
@@ -1003,16 +1025,44 @@
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h3 id="tech-notes">Tech Notes</h3>
-<h1 id="homepage">Homepage</h1>
-<p>There&rsquo;s stuff on the left, maybe.</p>
+<h1 id="setup-a-headless-raspberry-pi">Setup a headless Raspberry Pi</h1>
+<p><strong>Requirements</strong></p>
+<ul>
+<li>Raspberry Pi with power supply</li>
+<li>SD Card</li>
+</ul>
+<h2 id="imaging-the-sd-card">Imaging the SD Card:</h2>
+<p>Download Raspbian lite (this has no DE, if you want a DE download the full iso image not lite)
+<a href="http://www.raspberrypi.org/downloads">Raspbian Downloads</a></p>
+<p>Use an application like <a href="https://www.balena.io/etcher/">EthcherBalena</a> to write to the SD Card.</p>
+<h2 id="steps-to-take-once-the-image-is-written-to-the-sd-card">Steps to take once the image is written to the SD Card:</h2>
+<p>Once the image is written to the SD Card open a terminal and browse to the the SD Card (Usually /Volumes/boot/).</p>
+<p>If you want to enable SSH then make a file called &lsquo;ssh&rsquo; make sure the file has no extensions if you are doing this on windows.</p>
+<p><strong>Enable SSH:</strong>
+Linux or mac:</p>
+<pre><code>touch ssh
+</code></pre><p>Windows:</p>
+<pre><code>New-Item ssh
+</code></pre><p>Now add create a file called wpa_supplicant.conf and add the config below changing the network information to your own.</p>
+<pre><code>network={
+    ssid=&quot;ssid_name&quot;
+    psk=&quot;password&quot;
+}
+</code></pre><p>Once these steps are completed, plug the SD Card in and boot the Raspberry Pi.</p>
+<p>Now there are two options to accessing the device:</p>
+<pre><code>ssh pi@raspberry.local
+</code></pre><p>or</p>
+<p>Find the IP on your router or use nmap to find the IP then:</p>
+<pre><code>ssh pi@&lt;IPADDRESS&gt;
+</code></pre><p>The default password is <strong>raspberry</strong>.</p>
+<p>You should now have access to your device without having to plug in a monitor.</p>
+
+
+<footer class="footline">
 	
-  
+</footer>
+
         
             </div> 
         
@@ -1046,8 +1096,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1063,6 +1111,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1128,6 +1179,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1140,6 +1192,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1159,6 +1212,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 

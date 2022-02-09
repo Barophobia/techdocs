@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/logo.png" type="image/png">
 
-    <title>Home   </title>
+    <title>How to configure NXLog   </title>
 
     
     <link href="/css/nucleus.css?1644403156" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/nxlog/howtoconfigurenxlog/">
     <nav id="sidebar" class="">
 
 
@@ -676,7 +676,7 @@
   
     
     <li data-nav-id="/nxlog/" title="NXLog" class="dd-item
-        
+        parent
         
         
         ">
@@ -702,7 +702,7 @@
  
   
     
-      <li data-nav-id="/nxlog/howtoconfigurenxlog/" title="How to configure NXLog" class="dd-item ">
+      <li data-nav-id="/nxlog/howtoconfigurenxlog/" title="How to configure NXLog" class="dd-item active">
         <a href="/nxlog/howtoconfigurenxlog/">
         <b> - </b>How to configure NXLog
         
@@ -992,6 +992,28 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                   How to configure NXLog
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
@@ -1003,16 +1025,56 @@
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h3 id="tech-notes">Tech Notes</h3>
-<h1 id="homepage">Homepage</h1>
-<p>There&rsquo;s stuff on the left, maybe.</p>
+<h1 id="how-to-configure-nxlog">How to configure NXLog</h1>
+<h3 id="windows">Windows</h3>
+<ul>
+<li>
+<p>Edit the nxlog.conf file inside C:\Program Files (x86)\nxlog\conf</p>
+</li>
+<li>
+<p>At the bottom of the notepad will be some commented out lines that are similar to the lines below, remove the hashes so they arent commented out and make sure the output is correctly configured to the syslog server&rsquo;s IP using the correct Module (TCP/UDP) and Port.</p>
+</li>
+<li>
+<p>When you edit the nxlog.conf file make sure you restart the nxlog service.</p>
+</li>
+</ul>
+<pre><code># Modules section
+&lt;Input in&gt;
+    Module  im_msvistalog
+&lt;/Input&gt;
+
+&lt;Output out&gt;
+    Module  om_udp
+    Host    IP_ADDRESS
+    Port    514
+    Exec    to_syslog_snare();
+&lt;/Output&gt;
+
+# Route section
+&lt;Route 1&gt;
+    Path    in =&gt; out
+&lt;/Route&gt;
+</code></pre><h3 id="sending-logs-as-json">Sending Logs as JSON</h3>
+<ul>
+<li>Edit nxlog.conf and change the Extension and Output to look like the lines below</li>
+</ul>
+<pre><code>&lt;Extension json&gt;
+    Module    xm_json
+&lt;/Extension&gt;
+
+&lt;Output out&gt;
+    Module    om_tcp
+    Host      IP_ADDRESS
+    Port      514
+    Exec      to_json();
+&lt;/Output&gt;
+</code></pre>
+
+<footer class="footline">
 	
-  
+</footer>
+
         
             </div> 
         
@@ -1395,6 +1457,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1407,6 +1470,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1423,6 +1487,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 

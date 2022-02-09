@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/logo.png" type="image/png">
 
-    <title>Home   </title>
+    <title>WIP How to install Arch Linux   </title>
 
     
     <link href="/css/nucleus.css?1644403156" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/linux/installarch/">
     <nav id="sidebar" class="">
 
 
@@ -421,7 +421,7 @@
   
     
     <li data-nav-id="/linux/" title="Linux" class="dd-item
-        
+        parent
         
         
         ">
@@ -647,7 +647,7 @@
  
   
     
-      <li data-nav-id="/linux/installarch/" title="WIP How to install Arch Linux" class="dd-item ">
+      <li data-nav-id="/linux/installarch/" title="WIP How to install Arch Linux" class="dd-item active">
         <a href="/linux/installarch/">
         <b> - </b>WIP How to install Arch Linux
         
@@ -992,6 +992,28 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                   WIP How to install Arch Linux
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
@@ -1003,16 +1025,37 @@
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h3 id="tech-notes">Tech Notes</h3>
-<h1 id="homepage">Homepage</h1>
-<p>There&rsquo;s stuff on the left, maybe.</p>
+<h1 id="how-to-install-arch-linux">How to install Arch Linux</h1>
+<p>Arch linux is a sort of &lsquo;build it yourself&rsquo; OS allowing you to create the environment you desire, I use this to have a low resource requirement extending the life of &lsquo;old&rsquo; hardware but it can be used for more than that.</p>
+<h3 id="steps-to-install-arch-linux">Steps to install Arch Linux</h3>
+<p>Download the Arch Linux ISO from the website.
+<a href="https://www.archlinux.org">https://www.archlinux.org</a></p>
+<p>If you are building a virtual machine just mount the ISO to the machine and boot to it.</p>
+<p>If you are building a physical machine you will need to use a tool like balenaEtcher to build a live USB.
+If you don&rsquo;t want to use a tool then you can use the command below on Linux and change it to your path.</p>
+<pre><code>dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress &amp;&amp; sync
+</code></pre><p>Now boot to Arch Linux, this will take you to a live terminal session.</p>
+<p>Firstly, check your network connection using ping and ip link.</p>
+<pre><code>ping archlinux.org
+</code></pre><p>ip link will show you available interfaces.</p>
+<pre><code>ip link
+</code></pre><p>If you would like to use Wi-Fi:</p>
+<pre><code>wifi-menu
+</code></pre><p>Now set your time and date using NTP:</p>
+<pre><code>timedateclt set-ntp trueß
+</code></pre><p>list all disk and partitions:</p>
+<pre><code>fdisk -l
+</code></pre><p>Now select the disk you are going to format and partition:</p>
+<pre><code>cfdisk /dev/sda
+</code></pre><p>This will bring up a screen asking to select the label type, choose: &lsquo;gpt&rsquo;</p>
+<p><img src="/images/archinstall/labeltype.png" alt="LabelType"></p>
+
+
+<footer class="footline">
 	
-  
+</footer>
+
         
             </div> 
         
@@ -1046,8 +1089,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1063,6 +1104,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1192,6 +1236,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1210,6 +1255,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 

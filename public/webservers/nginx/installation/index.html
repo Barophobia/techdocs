@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/logo.png" type="image/png">
 
-    <title>Home   </title>
+    <title>Installing Nginx   </title>
 
     
     <link href="/css/nucleus.css?1644403156" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/webservers/nginx/installation/">
     <nav id="sidebar" class="">
 
 
@@ -838,7 +838,7 @@
   
     
     <li data-nav-id="/webservers/" title="Webservers" class="dd-item
-        
+        parent
         
         
         ">
@@ -867,7 +867,7 @@
   
     
     <li data-nav-id="/webservers/nginx/" title="Nginx" class="dd-item
-        
+        parent
         
         
         ">
@@ -938,8 +938,8 @@
   
     
     <li data-nav-id="/webservers/nginx/installation/" title="Installing Nginx" class="dd-item
-        
-        
+        parent
+        active
         
         ">
       <a href="/webservers/nginx/installation/">
@@ -992,6 +992,28 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                   Installing Nginx
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
@@ -1003,16 +1025,33 @@
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h3 id="tech-notes">Tech Notes</h3>
-<h1 id="homepage">Homepage</h1>
-<p>There&rsquo;s stuff on the left, maybe.</p>
+
+	<h1 id="installing-nginx">Installing Nginx</h1>
+<h2 id="installing-nginx-on-linux">Installing nginx on Linux</h2>
+<p>Ubuntu:</p>
+<pre><code>apt install nginx
+</code></pre><p>You may need to adjust UFW rules to allow access to the webserver.</p>
+<h2 id="checking-if-your-webserver-is-running">Checking if your webserver is running</h2>
+<pre><code>systemctl status nginx
+</code></pre><h2 id="managing-the-nginx-process">Managing the nginx process</h2>
+<p>To stop nginx:</p>
+<pre><code>systemctl stop nginx
+</code></pre><p>To start nginx:</p>
+<pre><code>systemctl start nginx
+</code></pre><p>To restart nginx:</p>
+<pre><code>systemctl restart nginx
+</code></pre><p>If you only make configuration changes you can reload without dropping connections:</p>
+<pre><code>systemctl reload nginx
+</code></pre>
+
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
             </div> 
         
@@ -1493,20 +1532,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1522,6 +1547,25 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1554,6 +1598,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1609,4 +1654,3 @@
 
   </body>
 </html>
-

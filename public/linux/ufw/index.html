@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/logo.png" type="image/png">
 
-    <title>Home   </title>
+    <title>Uncomplicated Firewall (UFW)   </title>
 
     
     <link href="/css/nucleus.css?1644403156" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/linux/ufw/">
     <nav id="sidebar" class="">
 
 
@@ -421,7 +421,7 @@
   
     
     <li data-nav-id="/linux/" title="Linux" class="dd-item
-        
+        parent
         
         
         ">
@@ -605,7 +605,7 @@
  
   
     
-      <li data-nav-id="/linux/ufw/" title="Uncomplicated Firewall (UFW)" class="dd-item ">
+      <li data-nav-id="/linux/ufw/" title="Uncomplicated Firewall (UFW)" class="dd-item active">
         <a href="/linux/ufw/">
         <b> - </b>Uncomplicated Firewall (UFW)
         
@@ -992,6 +992,28 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                   Uncomplicated Firewall (UFW)
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
@@ -1003,16 +1025,46 @@
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h3 id="tech-notes">Tech Notes</h3>
-<h1 id="homepage">Homepage</h1>
-<p>There&rsquo;s stuff on the left, maybe.</p>
+<h1 id="ufw">UFW</h1>
+<h2 id="installation">Installation:</h2>
+<p>Debian:</p>
+<pre><code>apt install ufw
+</code></pre><h2 id="check-the-status-of-ufw">Check the status of UFW:</h2>
+<p>You can check the status of ufw by running:</p>
+<pre><code>ufw status
+</code></pre><p>Without any changes it will most likely report back <strong>&lsquo;Status: Inactive&rsquo;</strong></p>
+<h2 id="set-up-ufw-to-allow-ssh-or-port-22">Set up UFW to allow SSH or port 22:</h2>
+<p>Here we will set up UFW to allow port 22 (SSH) connections so that once the UFW is enabled you are still able to SSH into the machine.</p>
+<ul>
+<li>First lets deny all incoming connections by default.</li>
+</ul>
+<pre><code>ufw default deny incoming
+</code></pre><ul>
+<li>Now lets allow ssh or port 22 - there are 2 ways of doing this.</li>
+</ul>
+<pre><code>ufw allow in ssh
+</code></pre><p>or</p>
+<pre><code>ufw allow in 22
+</code></pre><ul>
+<li>Once this is set we can enable the UFW.</li>
+</ul>
+<pre><code>ufw enable
+</code></pre><h2 id="view-all-your-rules">View all your rules:</h2>
+<pre><code>ufw status verbose
+</code></pre><h2 id="delete-a-rule">Delete a rule:</h2>
+<p>To delete a rule for example the SSH rule, run:</p>
+<pre><code>ufw delete allow in 'SSH'
+</code></pre><p>Once the rule is deleted, reload UFW</p>
+<pre><code>ufw reload
+</code></pre><h2 id="disable-ufw">Disable UFW:</h2>
+<pre><code>ufw disable
+</code></pre>
+
+<footer class="footline">
 	
-  
+</footer>
+
         
             </div> 
         
@@ -1046,8 +1098,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1063,6 +1113,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1160,6 +1213,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1175,6 +1229,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 

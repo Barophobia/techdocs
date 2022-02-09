@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/logo.png" type="image/png">
 
-    <title>Home   </title>
+    <title>How to mount a network share   </title>
 
     
     <link href="/css/nucleus.css?1644403156" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/linux/mountnfs/">
     <nav id="sidebar" class="">
 
 
@@ -421,7 +421,7 @@
   
     
     <li data-nav-id="/linux/" title="Linux" class="dd-item
-        
+        parent
         
         
         ">
@@ -449,7 +449,7 @@
  
   
     
-      <li data-nav-id="/linux/mountnfs/" title="How to mount a network share" class="dd-item ">
+      <li data-nav-id="/linux/mountnfs/" title="How to mount a network share" class="dd-item active">
         <a href="/linux/mountnfs/">
         <b> - </b>How to mount a network share
         
@@ -992,6 +992,28 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                   How to mount a network share
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
@@ -1003,16 +1025,20 @@
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h3 id="tech-notes">Tech Notes</h3>
-<h1 id="homepage">Homepage</h1>
-<p>There&rsquo;s stuff on the left, maybe.</p>
+<h1 id="how-to-mount-a-network-share">How to mount a network share</h1>
+<h2 id="nfs">NFS</h2>
+<p>Mounting an NFS share requires nfs-common. To install:</p>
+<pre><code>apt install nfs-common
+</code></pre><p>To mount an NFS network share use the command below:</p>
+<pre><code>mount -t nfs -o 192.168.0.100:/backups
+</code></pre><p>Replace the IP Address and share location to your required config.</p>
+
+
+<footer class="footline">
 	
-  
+</footer>
+
         
             </div> 
         
@@ -1046,8 +1072,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1063,6 +1087,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1079,6 +1104,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 

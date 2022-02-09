@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/logo.png" type="image/png">
 
-    <title>Home   </title>
+    <title>Creating a reverse proxy   </title>
 
     
     <link href="/css/nucleus.css?1644403156" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/webservers/nginx/reverseproxy/">
     <nav id="sidebar" class="">
 
 
@@ -838,7 +838,7 @@
   
     
     <li data-nav-id="/webservers/" title="Webservers" class="dd-item
-        
+        parent
         
         
         ">
@@ -867,7 +867,7 @@
   
     
     <li data-nav-id="/webservers/nginx/" title="Nginx" class="dd-item
-        
+        parent
         
         
         ">
@@ -895,7 +895,7 @@
  
   
     
-      <li data-nav-id="/webservers/nginx/reverseproxy/" title="Creating a reverse proxy" class="dd-item ">
+      <li data-nav-id="/webservers/nginx/reverseproxy/" title="Creating a reverse proxy" class="dd-item active">
         <a href="/webservers/nginx/reverseproxy/">
         <b> - </b>Creating a reverse proxy
         
@@ -992,6 +992,28 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                   Creating a reverse proxy
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
@@ -1003,16 +1025,34 @@
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h3 id="tech-notes">Tech Notes</h3>
-<h1 id="homepage">Homepage</h1>
-<p>There&rsquo;s stuff on the left, maybe.</p>
+<h1 id="reverse-proxy-with-nginx">Reverse proxy with nginx</h1>
+<p>In this example I will be making a reverse proxy for a calibre server so anywhere it references that service is a variable of whatever service you are setting up.</p>
+<ul>
+<li>
+<p>Create a new file inside /etc/nginx/sites-available/calibre</p>
+</li>
+<li>
+<p>Now edit the file and add the following</p>
+</li>
+</ul>
+<pre><code>server {
+    listen 80;
+    client_max_body_size 64M; # To upload large books (Change where required)
+    server_name calibre.example.com ;
+
+    location / {
+        proxy_pass http://127.0.0.1:8080;
+    }
+}
+</code></pre><p>You can now navigate to the server_name address you set and it will work as expected.</p>
+<p>It is recommended to issue a cert and use HTTPS this can be done with certbot.</p>
+
+
+<footer class="footline">
 	
-  
+</footer>
+
         
             </div> 
         
@@ -1493,20 +1533,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1522,6 +1548,23 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -1538,6 +1581,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 

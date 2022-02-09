@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/logo.png" type="image/png">
 
-    <title>Home   </title>
+    <title>Important Directories and Files   </title>
 
     
     <link href="/css/nucleus.css?1644403156" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/webservers/nginx/dirandfiles/">
     <nav id="sidebar" class="">
 
 
@@ -838,7 +838,7 @@
   
     
     <li data-nav-id="/webservers/" title="Webservers" class="dd-item
-        
+        parent
         
         
         ">
@@ -867,7 +867,7 @@
   
     
     <li data-nav-id="/webservers/nginx/" title="Nginx" class="dd-item
-        
+        parent
         
         
         ">
@@ -916,7 +916,7 @@
  
   
     
-      <li data-nav-id="/webservers/nginx/dirandfiles/" title="Important Directories and Files" class="dd-item ">
+      <li data-nav-id="/webservers/nginx/dirandfiles/" title="Important Directories and Files" class="dd-item active">
         <a href="/webservers/nginx/dirandfiles/">
         <b> - </b>Important Directories and Files
         
@@ -992,6 +992,28 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                   Important Directories and Files
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
@@ -1003,16 +1025,33 @@
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h3 id="tech-notes">Tech Notes</h3>
-<h1 id="homepage">Homepage</h1>
-<p>There&rsquo;s stuff on the left, maybe.</p>
+<h2 id="important-nginx-directories-and-files">Important nginx Directories and files</h2>
+<h3 id="content">Content</h3>
+<pre><code>/var/www/html
+</code></pre><p>The actual web content, which by default only consists of the default Nginx page you saw earlier, is served out of the /var/www/html directory. This can be changed by altering Nginx configuration files.</p>
+<h3 id="server-configuration">Server Configuration</h3>
+<pre><code>/etc/nginx
+</code></pre><p>The Nginx configuration directory. All of the Nginx configuration files reside here.</p>
+<pre><code>/etc/nginx/nginx.conf
+</code></pre><p>The main Nginx configuration file. This can be modified to make changes to the Nginx global configuration.</p>
+<pre><code>/etc/nginx/sites-available/
+</code></pre><p>The directory where per-site server blocks can be stored. Nginx will not use the configuration files found in this directory unless they are linked to the sites-enabled directory. Typically, all server block configuration is done in this directory, and then enabled by linking to the other directory.</p>
+<pre><code>/etc/nginx/sites-enabled/
+</code></pre><p>The directory where enabled per-site server blocks are stored. Typically, these are created by linking to configuration files found in the sites-available directory.</p>
+<pre><code>/etc/nginx/snippets
+</code></pre><p>This directory contains configuration fragments that can be included elsewhere in the Nginx configuration. Potentially repeatable configuration segments are good candidates for refactoring into snippets.</p>
+<h3 id="server-logs">Server Logs</h3>
+<pre><code>/var/log/nginx/access.log
+</code></pre><p>Every request to your web server is recorded in this log file unless Nginx is configured to do otherwise.</p>
+<pre><code>/var/log/nginx/error.log
+</code></pre><p>Any Nginx errors will be recorded in this log.</p>
+
+
+<footer class="footline">
 	
-  
+</footer>
+
         
             </div> 
         
@@ -1493,20 +1532,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1522,6 +1547,25 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1539,6 +1583,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1554,6 +1599,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 

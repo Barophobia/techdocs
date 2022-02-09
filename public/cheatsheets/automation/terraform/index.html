@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/logo.png" type="image/png">
 
-    <title>Home   </title>
+    <title>Terraform   </title>
 
     
     <link href="/css/nucleus.css?1644403156" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/cheatsheets/automation/terraform/">
     <nav id="sidebar" class="">
 
 
@@ -86,7 +86,7 @@
   
     
     <li data-nav-id="/cheatsheets/" title="Cheatsheets" class="dd-item
-        
+        parent
         
         
         ">
@@ -115,7 +115,7 @@
   
     
     <li data-nav-id="/cheatsheets/automation/" title="Automation" class="dd-item
-        
+        parent
         
         
         ">
@@ -170,8 +170,8 @@
   
     
     <li data-nav-id="/cheatsheets/automation/terraform/" title="Terraform" class="dd-item
-        
-        
+        parent
+        active
         
         ">
       <a href="/cheatsheets/automation/terraform/">
@@ -992,6 +992,28 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                   Terraform
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
@@ -1003,16 +1025,34 @@
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h3 id="tech-notes">Tech Notes</h3>
-<h1 id="homepage">Homepage</h1>
-<p>There&rsquo;s stuff on the left, maybe.</p>
+
+	<h1 id="terraform">Terraform</h1>
+<pre><code>terraform plan          # dry run
+terraform apply         # apply configuration changes
+terraform refresh       # synchronise state with the resource
+terraform destroy       # destroy current configuration
+</code></pre><h3 id="state-management">State management</h3>
+<pre><code>terraform state list # this will show the resources in the state file
+terraform state rm &lt;RESOURCE&gt; # remove a resource from the state list
+</code></pre><h3 id="correcting-formatting">Correcting formatting</h3>
+<pre><code>terraform fmt #reformats .tf files for better readability
+</code></pre><h3 id="remote-exec">Remote Exec</h3>
+<p>This is used for remotely executing a command.</p>
+<pre><code>provisioner &quot;remote-exec&quot; {
+    inline = [
+         &quot;apt install neofetch&quot;
+    ]
+}
+</code></pre>
+
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
             </div> 
         
@@ -1211,20 +1251,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1240,6 +1266,25 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1257,6 +1302,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1275,6 +1321,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1609,4 +1658,3 @@
 
   </body>
 </html>
-

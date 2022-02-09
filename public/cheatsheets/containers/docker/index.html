@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/logo.png" type="image/png">
 
-    <title>Home   </title>
+    <title>Docker   </title>
 
     
     <link href="/css/nucleus.css?1644403156" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/cheatsheets/containers/docker/">
     <nav id="sidebar" class="">
 
 
@@ -86,7 +86,7 @@
   
     
     <li data-nav-id="/cheatsheets/" title="Cheatsheets" class="dd-item
-        
+        parent
         
         
         ">
@@ -205,7 +205,7 @@
   
     
     <li data-nav-id="/cheatsheets/containers/" title="Containers" class="dd-item
-        
+        parent
         
         
         ">
@@ -234,8 +234,8 @@
   
     
     <li data-nav-id="/cheatsheets/containers/docker/" title="Docker" class="dd-item
-        
-        
+        parent
+        active
         
         ">
       <a href="/cheatsheets/containers/docker/">
@@ -992,6 +992,28 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                   Docker
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
@@ -1003,16 +1025,38 @@
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h3 id="tech-notes">Tech Notes</h3>
-<h1 id="homepage">Homepage</h1>
-<p>There&rsquo;s stuff on the left, maybe.</p>
+
+	<h1 id="docker">Docker</h1>
+<h3 id="docker-basics">Docker basics</h3>
+<pre><code>docker start &lt;CONTAINER&gt; #start container
+docker restart &lt;CONTAINER&gt; #restart container
+docker stop &lt;CONTAINER&gt; #stop container
+docker rm &lt;CONTAINER&gt; #remove a container
+</code></pre><h3 id="listing-containers">Listing containers</h3>
+<pre><code>docker ps       #list running containers
+docker ps -a    #list all containers
+docker ps -s    #list running containers with system specs
+</code></pre><h3 id="image-management">Image management</h3>
+<pre><code>docker images       #list local stored images
+docker rmi &lt;IMAGE&gt;  #remove a local image
+docker save -o &lt;TARBALL&gt; &lt;IMAGE&gt; #Save a local image as a tarball so you can archive or inspect the image.
+docker history &lt;IMAGE&gt; #Shows image creation history
+</code></pre><h3 id="building-images">Building Images</h3>
+<pre><code>docker build .
+docker build --build-arg ARG=VALUE . # pass variables with build arg
+</code></pre><h3 id="networks">Networks</h3>
+<pre><code>docker network ls      # shows docker network info
+docker network rm &lt;NETWORKID&gt; #Remove a network using the ID
+</code></pre>
+
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
             </div> 
         
@@ -1211,20 +1255,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1241,40 +1271,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
                         
-            
-            
-                
                     
                 
                 
@@ -1302,6 +1300,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1309,6 +1323,45 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1609,4 +1662,3 @@
 
   </body>
 </html>
-

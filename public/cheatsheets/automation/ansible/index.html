@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/logo.png" type="image/png">
 
-    <title>Home   </title>
+    <title>Ansible   </title>
 
     
     <link href="/css/nucleus.css?1644403156" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/cheatsheets/automation/ansible/">
     <nav id="sidebar" class="">
 
 
@@ -86,7 +86,7 @@
   
     
     <li data-nav-id="/cheatsheets/" title="Cheatsheets" class="dd-item
-        
+        parent
         
         
         ">
@@ -115,7 +115,7 @@
   
     
     <li data-nav-id="/cheatsheets/automation/" title="Automation" class="dd-item
-        
+        parent
         
         
         ">
@@ -144,8 +144,8 @@
   
     
     <li data-nav-id="/cheatsheets/automation/ansible/" title="Ansible" class="dd-item
-        
-        
+        parent
+        active
         
         ">
       <a href="/cheatsheets/automation/ansible/">
@@ -992,6 +992,28 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                   Ansible
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
@@ -1003,16 +1025,28 @@
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h3 id="tech-notes">Tech Notes</h3>
-<h1 id="homepage">Homepage</h1>
-<p>There&rsquo;s stuff on the left, maybe.</p>
+
+	<h1 id="ansible">Ansible</h1>
+<h3 id="playbooks">Playbooks</h3>
+<pre><code>ansible-playbook &lt;YAML&gt; -i &lt;HOSTSFILE&gt;    # Run on all hosts from specified hosts file
+ansible-playbook &lt;YAML&gt; -C                # Test run
+ansible-playbook &lt;YAML&gt; -C -D             # Dry run
+</code></pre><h3 id="check-syntax">Check Syntax</h3>
+<pre><code>ansible-playbook --syntax-check &lt;YAML&gt;
+</code></pre><h3 id="execute-commands-on-hosts">Execute commands on hosts</h3>
+<pre><code>ansible &lt;HOSTGROUP&gt; -a &lt;COMMAND&gt;
+</code></pre><p>Example:</p>
+<pre><code>ansible all -a &quot;neofetch&quot;
+</code></pre>
+
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
             </div> 
         
@@ -1211,20 +1245,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1240,6 +1260,23 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -1256,6 +1293,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1609,4 +1649,3 @@
 
   </body>
 </html>
-
