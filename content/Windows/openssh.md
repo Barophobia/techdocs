@@ -14,7 +14,7 @@ With the addition of windows server 2019 you can now install the openssh compone
 
 This will install the OpenSSH Server component and will allow you to edit the config and listen on the relevant port
 
-**Useful locations**
+**Useful locations:**
 
 sshd_config
 %programdata%\ssh
@@ -30,7 +30,7 @@ To start sshd in debug mode type 'sshd -d' into powershell, this will give you m
 
 To turn on logs you will need to remove the # before the log config in the ssh_config file located inside %Programdata%\ssh the logs will then go into %programdata%\ssh\logs.
 
-**Fixes**
+**Fixes:**
 
 **No Service inside the services applet**
 
