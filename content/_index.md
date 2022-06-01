@@ -9,4 +9,8 @@ chapter = true
 
 # Homepage
 
-There's stuff on the left, maybe.
+Menu on the left, enjoy
+
+This website should serve as a place to get quick fixes and find information about software and technology. 
+
+Built using hugo (Markdown static site generator)
